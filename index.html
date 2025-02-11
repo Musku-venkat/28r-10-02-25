@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <title>Document</title>
+        <link rel="stylesheet" href="./style.css">
+        <style>
+            #container{
+                display: grid;
+                gap: 15px;
+                grid-template-columns: repeat(auto-fill,minmax(300px,1fr));
+            }
+            #container>div{
+                padding: 10px;
+                margin: 10px;
+                border: 2px solid #ccc;
+                border-radius: 10px;
+                box-shadow: 2px 2px #ccc;
+            }
+            #container>div:hover{
+                transform: scale(1.1,1.1);
+                transition: 1s ease;
+            }
+        </style>
+    </head>
+    <body>
+        <input type="text" id="name" autocomplete="off" placeholder="username">
+        <button onclick="add_data()">Submit</button>
+        <div id="container"></div>
+        <script src="./script.js"></script>
+    </body>
+</html>
